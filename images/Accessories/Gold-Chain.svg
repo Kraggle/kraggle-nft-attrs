@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY st0 "fill:#E9F800;">
+	<!ENTITY st1 "fill:#F80000;">
+]>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
+<polygon id="yellow" style="&st0;" points="35,35 32,35 32,37 30,37 30,38 29,38 29,39 22,39 22,37 20,37 20,35 16,35 16,36 17,36 
+	17,38 19,38 19,40 21,40 21,42 31,42 31,41 32,41 32,39 34,39 34,38 35,38 "/>
+<rect id="red" x="25" y="40" style="&st1;" width="2" height="1"/>
+<g id="outlines">
+	<rect x="15" y="35" width="1" height="1"/>
+	<rect x="17" y="35" width="1" height="1"/>
+	<rect x="19" y="35" width="1" height="1"/>
+	<rect x="20" y="36" width="1" height="1"/>
+	<rect x="16" y="36" width="1" height="1"/>
+	<rect x="17" y="37" width="1" height="1"/>
+	<rect x="19" y="37" width="1" height="1"/>
+	<rect x="21" y="37" width="1" height="1"/>
+	<rect x="22" y="38" width="1" height="1"/>
+	<rect x="18" y="38" width="1" height="1"/>
+	<rect x="19" y="39" width="1" height="1"/>
+	<rect x="21" y="39" width="1" height="1"/>
+	<rect x="23" y="39" width="1" height="1"/>
+	<rect x="20" y="40" width="1" height="1"/>
+	<rect x="21" y="41" width="1" height="1"/>
+	<rect x="22" y="42" width="1" height="1"/>
+	<rect x="23" y="41" width="1" height="1"/>
+	<rect x="24" y="42" width="4" height="1"/>
+	<rect x="28" y="41" width="1" height="1"/>
+	<rect x="29" y="42" width="1" height="1"/>
+	<rect x="30" y="41" width="1" height="1"/>
+	<rect x="31" y="40" width="1" height="1"/>
+	<rect x="32" y="39" width="1" height="1"/>
+	<rect x="33" y="38" width="1" height="1"/>
+	<rect x="34" y="37" width="1" height="1"/>
+	<polygon points="34,35 34,36 35,36 35,37 36,37 36,35 	"/>
+	<rect x="32" y="35" width="1" height="1"/>
+	<rect x="31" y="36" width="1" height="1"/>
+	<rect x="30" y="37" width="1" height="1"/>
+	<rect x="29" y="38" width="1" height="1"/>
+	<rect x="28" y="39" width="1" height="1"/>
+	<rect x="30" y="39" width="1" height="1"/>
+	<rect x="32" y="37" width="1" height="1"/>
+	<rect x="24" y="38" width="4" height="1"/>
+</g>
+</svg>

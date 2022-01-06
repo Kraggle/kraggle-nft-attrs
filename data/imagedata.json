@@ -1,0 +1,428 @@
+{
+	"Background": [
+		{
+			"trait": "Blue",
+			"weight": 15,
+			"occurrence": 1187,
+			"rarity": 15.26
+		},
+		{
+			"trait": "Cyan",
+			"weight": 3,
+			"occurrence": 275,
+			"rarity": 3.54
+		},
+		{
+			"trait": "Green",
+			"weight": 15,
+			"occurrence": 1167,
+			"rarity": 15.01
+		},
+		{
+			"trait": "MartianWorld",
+			"weight": 2,
+			"occurrence": 207,
+			"rarity": 2.66
+		},
+		{
+			"trait": "Orange",
+			"weight": 15,
+			"occurrence": 1164,
+			"rarity": 14.97
+		},
+		{
+			"trait": "Pink",
+			"weight": 15,
+			"occurrence": 1138,
+			"rarity": 14.63
+		},
+		{
+			"trait": "Red",
+			"weight": 15,
+			"occurrence": 1170,
+			"rarity": 15.04
+		},
+		{
+			"trait": "White",
+			"weight": 20,
+			"occurrence": 1469,
+			"rarity": 18.89
+		}
+	],
+	"Body": [
+		{
+			"trait": "Cyan",
+			"weight": 4,
+			"occurrence": 340,
+			"rarity": 4.37
+		},
+		{
+			"trait": "Green",
+			"weight": 16,
+			"occurrence": 1308,
+			"rarity": 16.82
+		},
+		{
+			"trait": "Grey",
+			"weight": 16,
+			"occurrence": 1236,
+			"rarity": 15.89
+		},
+		{
+			"trait": "Orange",
+			"weight": 16,
+			"occurrence": 1235,
+			"rarity": 15.88
+		},
+		{
+			"trait": "Pink",
+			"weight": 16,
+			"occurrence": 1169,
+			"rarity": 15.03
+		},
+		{
+			"trait": "Red",
+			"weight": 16,
+			"occurrence": 1254,
+			"rarity": 16.12
+		},
+		{
+			"trait": "White",
+			"weight": 16,
+			"occurrence": 1235,
+			"rarity": 15.88
+		}
+	],
+	"Eyes": [
+		{
+			"trait": "Blue",
+			"weight": 15,
+			"occurrence": 1173,
+			"rarity": 15.08
+		},
+		{
+			"trait": "Cyan",
+			"weight": 3,
+			"occurrence": 253,
+			"rarity": 3.25
+		},
+		{
+			"trait": "Green",
+			"weight": 15,
+			"occurrence": 1223,
+			"rarity": 15.73
+		},
+		{
+			"trait": "Orange",
+			"weight": 15,
+			"occurrence": 1147,
+			"rarity": 14.75
+		},
+		{
+			"trait": "Pink",
+			"weight": 15,
+			"occurrence": 1188,
+			"rarity": 15.28
+		},
+		{
+			"trait": "White",
+			"weight": 20,
+			"occurrence": 1505,
+			"rarity": 19.35
+		},
+		{
+			"trait": "Yellow",
+			"weight": 17,
+			"occurrence": 1288,
+			"rarity": 16.56
+		}
+	],
+	"Hats": [
+		{
+			"trait": "Afro",
+			"weight": 1,
+			"occurrence": 152,
+			"rarity": 1.95
+		},
+		{
+			"trait": "Antennae",
+			"weight": 1,
+			"occurrence": 128,
+			"rarity": 1.65
+		},
+		{
+			"trait": "Antlers",
+			"weight": 1,
+			"occurrence": 134,
+			"rarity": 1.72
+		},
+		{
+			"trait": "Bunny-Ears",
+			"weight": 1,
+			"occurrence": 154,
+			"rarity": 1.98
+		},
+		{
+			"trait": "Cat-Ears",
+			"weight": 1,
+			"occurrence": 142,
+			"rarity": 1.83
+		},
+		{
+			"trait": "Devil-Ears",
+			"weight": 1,
+			"occurrence": 166,
+			"rarity": 2.13
+		},
+		{
+			"trait": "Jamaican-Beanie",
+			"weight": 1,
+			"occurrence": 162,
+			"rarity": 2.08
+		},
+		{
+			"trait": "King-Crown",
+			"weight": 1,
+			"occurrence": 137,
+			"rarity": 1.76
+		},
+		{
+			"trait": "Military-Hat",
+			"weight": 1,
+			"occurrence": 131,
+			"rarity": 1.68
+		},
+		{
+			"trait": "Party-Hat",
+			"weight": 1,
+			"occurrence": 136,
+			"rarity": 1.75
+		},
+		{
+			"trait": "Pink-Cap",
+			"weight": 1,
+			"occurrence": 136,
+			"rarity": 1.75
+		},
+		{
+			"trait": "Police-Hat",
+			"weight": 1,
+			"occurrence": 142,
+			"rarity": 1.83
+		},
+		{
+			"trait": "Priest-Hat",
+			"weight": 1,
+			"occurrence": 142,
+			"rarity": 1.83
+		},
+		{
+			"trait": "Princess-Crown",
+			"weight": 1,
+			"occurrence": 153,
+			"rarity": 1.97
+		},
+		{
+			"trait": "Santa-Hat",
+			"weight": 1,
+			"occurrence": 159,
+			"rarity": 2.04
+		},
+		{
+			"trait": "Sombrero",
+			"weight": 1,
+			"occurrence": 141,
+			"rarity": 1.81
+		},
+		{
+			"trait": "Top-Hat",
+			"weight": 1,
+			"occurrence": 130,
+			"rarity": 1.67
+		}
+	],
+	"Clothing": [
+		{
+			"trait": "Blue-Jumper",
+			"weight": 1,
+			"occurrence": 256,
+			"rarity": 3.29
+		},
+		{
+			"trait": "Bunny",
+			"weight": 1,
+			"occurrence": 287,
+			"rarity": 3.69
+		},
+		{
+			"trait": "Cyan-Hoodie",
+			"weight": 1,
+			"occurrence": 271,
+			"rarity": 3.48
+		},
+		{
+			"trait": "Fancy-Top",
+			"weight": 1,
+			"occurrence": 293,
+			"rarity": 3.77
+		},
+		{
+			"trait": "Football-Top",
+			"weight": 1,
+			"occurrence": 283,
+			"rarity": 3.64
+		},
+		{
+			"trait": "Military",
+			"weight": 1,
+			"occurrence": 276,
+			"rarity": 3.55
+		},
+		{
+			"trait": "Orange-Jumper",
+			"weight": 1,
+			"occurrence": 282,
+			"rarity": 3.63
+		},
+		{
+			"trait": "Pink-Hoodie",
+			"weight": 1,
+			"occurrence": 289,
+			"rarity": 3.72
+		},
+		{
+			"trait": "Police",
+			"weight": 1,
+			"occurrence": 272,
+			"rarity": 3.50
+		},
+		{
+			"trait": "Priest",
+			"weight": 1,
+			"occurrence": 292,
+			"rarity": 3.75
+		},
+		{
+			"trait": "Santa",
+			"weight": 1,
+			"occurrence": 310,
+			"rarity": 3.99
+		},
+		{
+			"trait": "Suit",
+			"weight": 1,
+			"occurrence": 302,
+			"rarity": 3.88
+		},
+		{
+			"trait": "Tuxedo",
+			"weight": 1,
+			"occurrence": 246,
+			"rarity": 3.16
+		},
+		{
+			"trait": "Vest",
+			"weight": 1,
+			"occurrence": 271,
+			"rarity": 3.48
+		},
+		{
+			"trait": "White-Hoodie",
+			"weight": 1,
+			"occurrence": 279,
+			"rarity": 3.59
+		}
+	],
+	"Accessories": [
+		{
+			"trait": "3D-Glasses",
+			"weight": 1,
+			"occurrence": 262,
+			"rarity": 3.37
+		},
+		{
+			"trait": "Angel-Wings",
+			"weight": 1,
+			"occurrence": 251,
+			"rarity": 3.23
+		},
+		{
+			"trait": "Cola-Bottle",
+			"weight": 1,
+			"occurrence": 276,
+			"rarity": 3.55
+		},
+		{
+			"trait": "Eye-Patch",
+			"weight": 1,
+			"occurrence": 293,
+			"rarity": 3.77
+		},
+		{
+			"trait": "FBI-Sun-Glasses",
+			"weight": 1,
+			"occurrence": 297,
+			"rarity": 3.82
+		},
+		{
+			"trait": "Funky-Sun-Glasses",
+			"weight": 1,
+			"occurrence": 282,
+			"rarity": 3.63
+		},
+		{
+			"trait": "Gold-Chain",
+			"weight": 1,
+			"occurrence": 297,
+			"rarity": 3.82
+		},
+		{
+			"trait": "Headphones",
+			"weight": 1,
+			"occurrence": 281,
+			"rarity": 3.61
+		},
+		{
+			"trait": "Joint",
+			"weight": 1,
+			"occurrence": 295,
+			"rarity": 3.79
+		},
+		{
+			"trait": "Leather-Strap",
+			"weight": 1,
+			"occurrence": 277,
+			"rarity": 3.56
+		},
+		{
+			"trait": "Luxury-Necklace",
+			"weight": 1,
+			"occurrence": 269,
+			"rarity": 3.46
+		},
+		{
+			"trait": "Priest-Necklace",
+			"weight": 1,
+			"occurrence": 260,
+			"rarity": 3.34
+		},
+		{
+			"trait": "Santa-Beard",
+			"weight": 1,
+			"occurrence": 314,
+			"rarity": 4.04
+		},
+		{
+			"trait": "White-Moustache",
+			"weight": 1,
+			"occurrence": 260,
+			"rarity": 3.34
+		},
+		{
+			"trait": "White-Sun-Glasses",
+			"weight": 1,
+			"occurrence": 295,
+			"rarity": 3.79
+		}
+	]
+}

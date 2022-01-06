@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY st0 "fill:#FFFFFF;">
+	<!ENTITY st1 "fill:#F800E9;">
+]>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
+<polygon id="whites" style="&st0;" points="38,2 36,2 36,3 35,3 35,4 34,4 34,5 33,5 33,6 32,6 32,7 31,7 31,8 30,8 30,10 29,10 
+	29,11 22,11 22,10 21,10 21,8 20,8 20,7 19,7 19,6 18,6 18,5 17,5 17,4 16,4 16,3 15,3 15,2 13,2 13,17 14,17 14,18 17,18 17,17 
+	18,17 18,16 19,16 19,14 20,14 20,13 21,13 21,12 30,12 30,13 31,13 31,14 32,14 32,16 33,16 33,17 34,17 34,18 37,18 37,17 38,17 
+	"/>
+<g id="pink">
+	<polygon style="&st1;" points="36,4 36,5 35,5 35,6 34,6 34,7 33,7 33,8 32,8 32,9 31,9 31,11 32,11 32,13 33,13 33,14 34,14 
+		34,15 35,15 35,16 36,16 36,17 37,17 37,4 	"/>
+	<polygon style="&st1;" points="19,8 18,8 18,7 17,7 17,6 16,6 16,5 15,5 15,4 14,4 14,17 15,17 15,16 16,16 16,15 17,15 17,14 
+		18,14 18,12 19,12 19,11 20,11 20,9 19,9 	"/>
+</g>
+<g id="outlines">
+	<rect x="13" y="1" width="2" height="1"/>
+	<rect x="15" y="2" width="1" height="1"/>
+	<rect x="16" y="3" width="1" height="1"/>
+	<rect x="17" y="4" width="1" height="1"/>
+	<rect x="18" y="5" width="1" height="1"/>
+	<rect x="19" y="6" width="1" height="1"/>
+	<rect x="20" y="7" width="1" height="1"/>
+	<rect x="21" y="8" width="1" height="2"/>
+	<rect x="20" y="13" width="1" height="1"/>
+	<rect x="19" y="14" width="1" height="2"/>
+	<rect x="18" y="16" width="1" height="1"/>
+	<rect x="17" y="17" width="1" height="1"/>
+	<rect x="14" y="18" width="3" height="1"/>
+	<rect x="13" y="17" width="1" height="1"/>
+	<rect x="12" y="2" width="1" height="15"/>
+	<path d="M29,12v-2h-7v2h-1v1h9v-1H29z M23,12v-1h5v1H23z"/>
+	<rect x="29" y="8" width="1" height="2"/>
+	<rect x="30" y="7" width="1" height="1"/>
+	<rect x="31" y="6" width="1" height="1"/>
+	<rect x="32" y="5" width="1" height="1"/>
+	<rect x="33" y="4" width="1" height="1"/>
+	<rect x="34" y="3" width="1" height="1"/>
+	<rect x="35" y="2" width="1" height="1"/>
+	<rect x="36" y="1" width="2" height="1"/>
+	<rect x="38" y="2" width="1" height="15"/>
+	<polygon points="37,18 34,18 34,19 38,19 38,17 37,17 	"/>
+	<rect x="33" y="17" width="1" height="1"/>
+	<rect x="32" y="16" width="1" height="1"/>
+	<rect x="31" y="14" width="1" height="2"/>
+	<rect x="30" y="13" width="1" height="1"/>
+</g>
+</svg>
