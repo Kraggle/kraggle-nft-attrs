@@ -37,41 +37,87 @@ define('KNA_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('KNA_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 function kna_shortcode() {
-	$version = '1.0.0';
+	$version = '1.0.5';
 
 	wp_enqueue_style('kna', KNA_PLUGIN_URL . 'style/style.css', [], $version);
 	wp_enqueue_script('module-kna', KNA_PLUGIN_URL . 'js/script.js', ['jquery'], $version);
-	wp_localize_script('module-kna', 'kna', [
-		'url' => KNA_PLUGIN_URL
-	]);
 
-	$data = json_decode(file_get_contents(KNA_PLUGIN_PATH . 'data/imagedata.json'));
+	$json = json_decode(file_get_contents(KNA_PLUGIN_PATH . 'data/imagedata.json'));
 	$path = KNA_PLUGIN_PATH . 'images/';
 	$url = KNA_PLUGIN_URL . 'images/';
+	$data = (object) [];
+
+	foreach ($json as $attr) {
+		$data->{$attr->path} = $attr;
+		$items = [];
+		foreach ($attr->items as $item) {
+			$mPath = "{$attr->path}/{$item->file}.svg";
+			if (!file_exists($path . $mPath)) continue;
+
+			$item->url = $url . $mPath;
+			$item->trait = str_replace('-', ' ', $item->file);
+			$items[] = $item;
+		}
+		$data->{$attr->path}->items = $items;
+	}
+
+	wp_localize_script('module-kna', 'kna', [
+		'url' => KNA_PLUGIN_URL,
+		'attrs' => $data
+	]);
+
+	$selected = (object) [];
+	$pause = file_get_contents('https://fa.kgl.app?t=light&i=pause-circle');
+	$pause = str_replace('<svg ', '<svg class="svg-pause" ', $pause);
+	$play = file_get_contents('https://fa.kgl.app?t=light&i=play-circle');
+	$play = str_replace('<svg ', '<svg class="svg-play hidden" ', $play);
 
 	ob_start(); ?>
 
 	<div class="kna-container">
-		<?php foreach ($data as $attr => $value) { ?>
-			<p class="kna-title"><?= $attr ?></p>
-			<div class="kna-attrs">
-				<?php
-				usort($value, function ($a, $b) {
-					return $a->rarity <=> $b->rarity;
-				});
-				foreach ($value as $item) {
-					$mPath = "{$attr}/{$item->trait}.svg";
-					if (!file_exists($path . $mPath)) {
-						continue;
-					} ?>
-					<div class="kna-attr">
-						<img class="kna-img" src="<?= $url . $mPath ?>" alt="<?= $item->trait ?>">
-						<p class="kna-name"><?= str_replace('-', ' ', $item->trait) ?></p>
-						<p class="kna-rare"><?= "{$item->rarity}%" ?></p>
+
+		<div class="kna-left">
+			<?php foreach ($data as $attr => $obj) {
+				$no = array_rand($obj->items);
+				$qty = count($obj->items);
+				$item = $obj->items[$no];
+				$selected->$attr = $item; ?>
+
+				<div class="kna-detail <?= $attr ?>">
+					<div class="kna-bar">
+						<span class="kna-title"><?= $obj->singular ?></span>
+						<span class="kna-count">
+							<num><?= $no + 1 ?></num> of <?= $qty ?>
+						</span>
 					</div>
-				<?php } ?>
-			</div>
-		<?php } ?>
+					<span class="kna-btn <?= $attr ?>"><?= $pause . $play ?></span>
+
+					<div class="kna-attr trait">
+						<span class="kna-key">Trait</span>
+						<span class="kna-val"><?= $item->trait ?></span>
+					</div>
+
+					<div class="kna-attr occur">
+						<span class="kna-key">Occurrence</span>
+						<span class="kna-val"><?= $item->occurrence ?></span>
+					</div>
+
+					<div class="kna-attr rarity">
+						<span class="kna-key">Rarity</span>
+						<span class="kna-val"><?= $item->rarity . '%' ?></span>
+					</div>
+
+				</div>
+
+			<?php } ?>
+		</div>
+
+		<div class="kna-right">
+			<?php foreach ($data as $attr => $obj) {
+				$item = $selected->$attr; ?>
+				<img class="kna-img <?= $attr ?>" src="<?= $item->url ?>" alt />
+			<?php } ?>
+		</div>
 	</div>
 
 <?php $html = ob_get_contents();
