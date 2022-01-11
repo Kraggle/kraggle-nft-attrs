@@ -16,7 +16,7 @@
  * Plugin Name:       Kraggles NFT Attributes
  * Plugin URI:        http://kragglesites.com
  * Description:       Shortcode for showing off nft attributes
- * Version:           1.0.0
+ * Version:           1.0.6
  * Author:            Kraggle
  * Author URI:        http://kragglesites.com/
  * License:           GPLv3
@@ -37,7 +37,7 @@ define('KNA_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('KNA_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 function kna_shortcode() {
-	$version = '1.0.5';
+	$version = '1.0.6';
 
 	wp_enqueue_style('kna', KNA_PLUGIN_URL . 'style/style.css', [], $version);
 	wp_enqueue_script('module-kna', KNA_PLUGIN_URL . 'js/script.js', ['jquery'], $version);
