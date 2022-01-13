@@ -51,6 +51,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 14px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .kna-detail .kna-title {
   font-weight: bold;
@@ -68,18 +72,40 @@
   font-weight: bold;
 }
 .kna-detail .kna-btn {
-  position: absolute;
   display: inline-block;
-  width: 22px;
   fill: currentColor;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.kna-detail .kna-btn.pause {
+  width: 22px;
+  height: 22px;
   bottom: 0;
   right: 0;
+  position: absolute;
 }
 .kna-detail .kna-btn .hidden {
   display: none;
 }
 .kna-detail .kna-count {
   font-size: 16px;
+}
+.kna-detail .right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.kna-control {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map*/

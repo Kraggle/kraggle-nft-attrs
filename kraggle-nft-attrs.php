@@ -16,7 +16,7 @@
  * Plugin Name:       Kraggles NFT Attributes
  * Plugin URI:        http://kragglesites.com
  * Description:       Shortcode for showing off nft attributes
- * Version:           1.0.6
+ * Version:           1.0.9
  * Author:            Kraggle
  * Author URI:        http://kragglesites.com/
  * License:           GPLv3
@@ -37,7 +37,7 @@ define('KNA_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('KNA_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 function kna_shortcode() {
-	$version = '1.0.6';
+	$version = '1.0.9';
 
 	wp_enqueue_style('kna', KNA_PLUGIN_URL . 'style/style.css', [], $version);
 	wp_enqueue_script('module-kna', KNA_PLUGIN_URL . 'js/script.js', ['jquery'], $version);
@@ -67,10 +67,14 @@ function kna_shortcode() {
 	]);
 
 	$selected = (object) [];
-	$pause = file_get_contents('https://fa.kgl.app?t=light&i=pause-circle');
+	$fa = 'https://fa.kgl.app';
+	$pause = file_get_contents("$fa?t=light&i=pause-circle");
 	$pause = str_replace('<svg ', '<svg class="svg-pause" ', $pause);
-	$play = file_get_contents('https://fa.kgl.app?t=light&i=play-circle');
+	$play = file_get_contents("$fa?t=light&i=play-circle");
 	$play = str_replace('<svg ', '<svg class="svg-play hidden" ', $play);
+	$arrow = file_get_contents("$fa?t=light&i=arrow-alt-left");
+	$arrow_left = str_replace('<svg ', '<svg class="svg-play left" ', $arrow);
+	$arrow_right = str_replace('<svg ', '<svg class="svg-play right" ', $arrow);
 
 	ob_start(); ?>
 
@@ -86,11 +90,15 @@ function kna_shortcode() {
 				<div class="kna-detail <?= $attr ?>">
 					<div class="kna-bar">
 						<span class="kna-title"><?= $obj->singular ?></span>
-						<span class="kna-count">
-							<num><?= $no + 1 ?></num> of <?= $qty ?>
-						</span>
+						<div class="kna-control">
+							<span class="kna-btn kna-skip prev <?= $attr ?>"><?= $arrow_left ?></span>
+							<span class="kna-count">
+								<num><?= $no + 1 ?></num> of <?= $qty ?>
+							</span>
+							<span class="kna-btn kna-skip next <?= $attr ?>"><?= $arrow_right ?></span>
+						</div>
 					</div>
-					<span class="kna-btn <?= $attr ?>"><?= $pause . $play ?></span>
+					<span class="kna-btn pause <?= $attr ?>"><?= $pause . $play ?></span>
 
 					<div class="kna-attr trait">
 						<span class="kna-key">Trait</span>

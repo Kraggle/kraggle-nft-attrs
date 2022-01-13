@@ -3,59 +3,79 @@ const $ = jQuery;
 $(() => {
 	const intervals = {};
 	$.each(kna.attrs, (attr, value) => {
+		value.attr = attr;
+		$(`.kna-detail.${attr}`).data('attr', value);
 		setTimeout(() => {
-			intervals[attr] = setInterval(() => {
-				if ($(`.kna-btn.${attr} .svg-pause.hidden`).length) return;
-
-				const me = $(`.kna-detail.${attr}`),
-					num = parseInt($('.kna-count num', me).html()) - 1;
-				let i;
-				do {
-					i = random(0, value.items.length - 1);
-				} while (i == num);
-
-				const item = value.items[i],
-					img = $(`.kna-img.${attr}`);
-				img.animate({
-					opacity: 0,
-					left: "-=500"
-				}, 300, () => {
-					img.attr('src', item.url);
-					img.css({
-						left: 'initial',
-						right: '-500px'
-					});
-					img.animate({
-						opacity: 1,
-						right: 0,
-						left: 0
-					});
-
-					$('.kna-count num', me).startSpinwriter({
-						text: i + 1
-					});
-					$('.kna-attr.trait .kna-val', me).startSpinwriter({
-						text: item.trait
-					});
-					$('.kna-attr.occur .kna-val', me).startSpinwriter({
-						text: item.occurrence
-					});
-					$('.kna-attr.rarity .kna-val', me).startSpinwriter({
-						text: item.rarity + '%'
-					});
-				});
-
-			}, random(10000, 20000));
+			intervals[attr] = setInterval(loadNext, random(10000, 20000), value);
 		}, random(10000));
-
 	});
 
-	$('.kna-btn').on('click', function() {
+	$('.kna-btn.pause').on('click', function() {
 		const now = $('.hidden', this);
 		now.siblings('svg').addClass('hidden');
 		now.removeClass('hidden');
 	});
+
+	$('.kna-container').closest('.et_pb_section').css('overflow', 'hidden');
+
+	$('.kna-skip').on('click', function() {
+		loadNext($(this).closest('.kna-detail').data('attr'), true, $(this).hasClass('next'));
+	});
 });
+
+const loadNext = (value, force, next) => {
+	const attr = value.attr;
+	if (!force && $(`.kna-btn.${attr} .svg-pause.hidden`).length) return;
+
+	const me = $(`.kna-detail.${attr}`),
+		num = parseInt($('.kna-count num', me).html()) - 1,
+		max = value.items.length - 1;
+	let i = num;
+
+	if (!force) {
+		do {
+			i = random(0, value.items.length - 1);
+		} while (i == num);
+	} else if (next) {
+		i++;
+		i = i > max ? 0 : i;
+	} else {
+		i--;
+		i = i < 0 ? max : i;
+	}
+
+	const item = value.items[i],
+		img = $(`.kna-img.${attr}`);
+	img.animate({
+		opacity: 0,
+		left: "-=500"
+	}, 300, () => {
+		img.attr('src', item.url);
+		img.css({
+			left: 'initial',
+			right: '-500px'
+		});
+		img.animate({
+			opacity: 1,
+			right: 0,
+			left: 0
+		});
+
+		$('.kna-count num', me).startSpinwriter({
+			text: i + 1
+		});
+		$('.kna-attr.trait .kna-val', me).startSpinwriter({
+			text: item.trait
+		});
+		$('.kna-attr.occur .kna-val', me).startSpinwriter({
+			text: item.occurrence
+		});
+		$('.kna-attr.rarity .kna-val', me).startSpinwriter({
+			text: item.rarity + '%'
+		});
+	});
+
+}
 
 const random = (min = 0, max = 100) => Math.floor(Math.random() * (max - min)) + min;
 

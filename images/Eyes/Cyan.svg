@@ -8,8 +8,6 @@
 	.st2{fill:#008CD8;}
 	.st3{fill:#00B7E6;}
 	.st4{fill:#00DFF4;}
-	.st5{display:none;}
-	.st6{display:inline;}
 </style>
 <g id="eyes">
 	<rect x="30" y="21" class="st0" width="1" height="2"/>
@@ -23,9 +21,9 @@
 	<rect x="21" y="25" class="st4" width="2" height="1"/>
 	<rect x="28" y="25" class="st4" width="2" height="1"/>
 </g>
-<g id="pupils" class="st5">
-	<rect x="22" y="24" class="st6" width="1" height="1"/>
-	<rect x="28" y="24" class="st6" width="1" height="1"/>
+<g id="pupils">
+	<rect x="22" y="24" width="1" height="1"/>
+	<rect x="28" y="24" width="1" height="1"/>
 </g>
 <g>
 	<rect x="27" y="23" width="1" height="3"/>
