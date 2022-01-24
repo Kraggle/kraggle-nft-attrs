@@ -1,0 +1,70 @@
+[
+	{
+		"name": "Variation 1",
+		"layers": {
+			"background": "unique",
+			"eyes": "unique",
+			"body": "unique"
+		},
+		"rarity": "0.99%",
+		"quantity": 77
+	},
+	{
+		"name": "Variation 2",
+		"layers": {
+			"background": "unique",
+			"eyes": "unique",
+			"body": "unique",
+			"clothes": "unique"
+		},
+		"rarity": "22.45%",
+		"quantity": 1746
+	},
+	{
+		"name": "Variation 3",
+		"layers": {
+			"background": "unique",
+			"eyes": "unique",
+			"body": "unique",
+			"accessories": "unique"
+		},
+		"rarity": "22.45%",
+		"quantity": 1746
+	},
+	{
+		"name": "Variation 4",
+		"layers": {
+			"background": "unique",
+			"eyes": "unique",
+			"body": "unique",
+			"hats": "unique"
+		},
+		"rarity": "22.45%",
+		"quantity": 1746
+	},
+	{
+		"name": "Variation 5",
+		"layers": {
+			"background": "unique",
+			"eyes": "unique",
+			"body": "unique",
+			"clothes": "match~hats",
+			"accessories": "unique",
+			"hats": "match~clothes"
+		},
+		"rarity": "9%",
+		"quantity": 700
+	},
+	{
+		"name": "Variation 6",
+		"layers": {
+			"background": "unique",
+			"eyes": "unique",
+			"body": "unique",
+			"clothes": "match~hats",
+			"hats": "match~clothes"
+		},
+		"rarity": "22.44%",
+		"quantity": 1745
+	}
+]

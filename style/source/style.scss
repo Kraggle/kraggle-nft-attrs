@@ -101,3 +101,51 @@
   gap: 6px;
   align-items: center;
 }
+
+.kna-rarity-wrap {
+  display: grid;
+  gap: 50px;
+}
+
+.kna-variation {
+  font-size: 18px;
+
+  .kna-img-wrap {
+    position: relative;
+    padding-top: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      border-radius: 16px;
+
+      &:first-of-type {
+        border: 1px solid #ddd;
+      }
+    }
+  }
+
+  .kna-block {
+    display: block;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+  }
+
+  .kna-title {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 12px 0 8px;
+  }
+
+  .kna-key {
+    padding-right: 8px;
+    font-weight: bold;
+
+    &::after {
+      content: ":";
+    }
+  }
+}
