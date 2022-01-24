@@ -1,6 +1,20 @@
 const $ = jQuery;
 
+const runScriptOn = 1; // 1 = when document visible, 2 = when window focus, 0 = always
+let documentHidden = false;
+
 $(() => {
+	if (runScriptOn == 1) {
+		$(document).on('visibilitychange', () => {
+			documentHidden = document.hidden;
+		});
+	} else if (runScriptOn == 2) {
+		$(window).on('blur focus', () => {
+			documentHidden = !document.hasFocus();
+		});
+		documentHidden = !document.hasFocus();
+	}
+
 	const intervals = {};
 	$.each(kna.attrs, (attr, value) => {
 		value.attr = attr;
@@ -25,7 +39,7 @@ $(() => {
 
 const loadNext = (value, force, next) => {
 	const attr = value.attr;
-	if (!force && $(`.kna-btn.${attr} .svg-pause.hidden`).length) return;
+	if (!force && (documentHidden || $(`.kna-btn.${attr} .svg-pause.hidden`).length)) return;
 
 	const me = $(`.kna-detail.${attr}`),
 		num = parseInt($('.kna-count num', me).html()) - 1,

@@ -16,7 +16,7 @@
  * Plugin Name:       Kraggles NFT Attributes
  * Plugin URI:        http://kragglesites.com
  * Description:       Shortcode for showing off nft attributes
- * Version:           1.0.9
+ * Version:           1.1.0
  * Author:            Kraggle
  * Author URI:        http://kragglesites.com/
  * License:           GPLv3
@@ -37,28 +37,27 @@ define('KNA_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('KNA_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 function kna_shortcode() {
-	$version = '1.0.9';
+	$version = '1.1.0';
 
 	wp_enqueue_style('kna', KNA_PLUGIN_URL . 'style/style.css', [], $version);
 	wp_enqueue_script('module-kna', KNA_PLUGIN_URL . 'js/script.js', ['jquery'], $version);
 
-	$json = json_decode(file_get_contents(KNA_PLUGIN_PATH . 'data/imagedata.json'));
-	$path = KNA_PLUGIN_PATH . 'images/';
-	$url = KNA_PLUGIN_URL . 'images/';
+	$fa = 'https://images.kgl.app';
+	$json = json_decode(file_get_contents("$fa/martians/attributes"), true);
+	
+	if (!isset($json['directory'])) return '';
+	$json = $json['directory'];
+
+	usort($json, function($a, $b) {
+		return $a['order'] <=> $b['order'];
+	});
+	$json = json_decode(json_encode($json));
+	
 	$data = (object) [];
-
 	foreach ($json as $attr) {
-		$data->{$attr->path} = $attr;
-		$items = [];
-		foreach ($attr->items as $item) {
-			$mPath = "{$attr->path}/{$item->file}.svg";
-			if (!file_exists($path . $mPath)) continue;
-
-			$item->url = $url . $mPath;
+		foreach ($attr->items as $item)
 			$item->trait = str_replace('-', ' ', $item->file);
-			$items[] = $item;
-		}
-		$data->{$attr->path}->items = $items;
+		$data->{$attr->path} = $attr;
 	}
 
 	wp_localize_script('module-kna', 'kna', [
@@ -68,13 +67,10 @@ function kna_shortcode() {
 
 	$selected = (object) [];
 	$fa = 'https://fa.kgl.app';
-	$pause = file_get_contents("$fa?t=light&i=pause-circle");
-	$pause = str_replace('<svg ', '<svg class="svg-pause" ', $pause);
-	$play = file_get_contents("$fa?t=light&i=play-circle");
-	$play = str_replace('<svg ', '<svg class="svg-play hidden" ', $play);
-	$arrow = file_get_contents("$fa?t=light&i=arrow-alt-left");
-	$arrow_left = str_replace('<svg ', '<svg class="svg-play left" ', $arrow);
-	$arrow_right = str_replace('<svg ', '<svg class="svg-play right" ', $arrow);
+	$pause = file_get_contents("$fa?t=light&i=pause-circle&class=svg-pause");
+	$play = file_get_contents("$fa?t=light&i=play-circle&class=svg-play%20hidden");
+	$arrow_left = file_get_contents("$fa?t=light&i=arrow-alt-left&class=left");
+	$arrow_right = file_get_contents("$fa?t=light&i=arrow-alt-left&class=right");
 
 	ob_start(); ?>
 
